@@ -4,14 +4,17 @@
   "displayName": "Extension Name",
   "version": "0.0.0",
   "description": "这是一个测试扩展。",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "https://github.com/joygqz/vscode-extension-template.git"
   },
+  "keywords": [],
   "categories": [
     "Other"
   ],
   "main": "./dist/extension.js",
+  "icon": "./images/logo.png",
   "files": [
     "CHANGELOG.md",
     "LICENSE",
@@ -25,9 +28,26 @@
     "commands": [
       {
         "command": "vscode-extension-template.helloWorld",
-        "title": "Hello World"
+        "title": "Hello World",
+        "category": "Extension Name",
+        "icon": {
+          "light": "images/logo.svg",
+          "dark": "images/logo.svg"
+        }
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Extension Name",
+      "properties": {
+        "vscode-extension-template. ": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable the feature."
+        }
+      }
+    },
+    "menus": {}
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
