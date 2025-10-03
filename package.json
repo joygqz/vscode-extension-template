@@ -1,0 +1,57 @@
+{
+  "publisher": "joygqz",
+  "name": "vscode-extension-template",
+  "displayName": "vscode-extension-template",
+  "version": "0.0.0",
+  "description": "这是一个 VSCode 扩展开发模版",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joygqz/vscode-extension-template.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "dist/*"
+  ],
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-extension-template.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "package": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
+    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint .",
+    "ext:package": "vsce package",
+    "ext:publish": "vsce publish",
+    "release": "bumpp"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.4.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.104.0",
+    "@vscode/vsce": "^3.6.2",
+    "bumpp": "^10.2.3",
+    "esbuild": "^0.25.10",
+    "eslint": "^9.36.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3"
+  }
+}
