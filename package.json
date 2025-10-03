@@ -1,9 +1,9 @@
 {
   "publisher": "joygqz",
   "name": "vscode-extension-template",
-  "displayName": "vscode-extension-template",
+  "displayName": "Extension Name",
   "version": "0.0.0",
-  "description": "这是一个 VSCode 扩展开发模版",
+  "description": "这是一个测试扩展。",
   "repository": {
     "type": "git",
     "url": "https://github.com/joygqz/vscode-extension-template.git"
