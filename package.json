@@ -40,7 +40,7 @@
       "type": "object",
       "title": "Extension Name",
       "properties": {
-        "vscode-extension-template. ": {
+        "vscode-extension-template.test": {
           "type": "boolean",
           "default": true,
           "description": "Enable or disable the feature."
